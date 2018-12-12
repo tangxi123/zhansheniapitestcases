@@ -2,11 +2,12 @@ package com.bbd.zhanshen.i.api.bean;
 
 import org.springframework.http.HttpMethod;
 
+import java.io.Serializable;
 import java.net.URI;
 import java.time.LocalDateTime;
 import java.util.Map;
 
-public class Testcase {
+public class Testcase{
     private Long id;
 
     private String suite;
@@ -19,7 +20,7 @@ public class Testcase {
 
     private HttpMethod method;
 
-    private URI url;
+    private String url;
 
     private Map<String, String> headers;
 
@@ -85,11 +86,11 @@ public class Testcase {
         this.method = method;
     }
 
-    public URI getUrl() {
+    public String getUrl() {
         return url;
     }
 
-    public void setUrl(URI url) {
+    public void setUrl(String url) {
         this.url = url;
     }
 
