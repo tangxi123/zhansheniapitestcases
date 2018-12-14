@@ -23,16 +23,18 @@ public class BaseIT extends AbstractTestNGSpringContextTests {
     @Autowired
     TestcaseMapper testcaseMapper;
 
+    @Autowired
+    TokenUtil tokenUtil;
+
     public List<Testcase> getTestcase(String suite, String testModule){
         return testcaseMapper.GetTestcaseByModuleAndSuite(suite, testModule);
-
     }
 
-    @Test
-    public void testA(){
-        Assert.assertEquals(1,1);
+//    @Test
+//    public void getToken(){
+//        System.out.println(tokenUtil.getToken());
+//    }
 
-    }
 
 
 
