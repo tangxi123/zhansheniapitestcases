@@ -25,7 +25,7 @@ public class ApiApplication implements CommandLineRunner{
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println(this.testcaseMapper.GetTestcaseByModuleAndSuite("POC_User","login"));
+//        System.out.println(this.testcaseMapper.GetTestcaseByModuleAndSuite("POC_User","login"));
 //        System.out.println(tokenUtil.getToken());
     }
 }

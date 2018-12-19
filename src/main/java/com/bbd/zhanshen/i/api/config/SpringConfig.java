@@ -1,5 +1,6 @@
 package com.bbd.zhanshen.i.api.config;
 
+
 import com.bbd.zhanshen.i.api.common.TokenUtil;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,6 +18,8 @@ public class SpringConfig {
     public TokenUtil getTokenUtil(){
         return new TokenUtil(getRestTemplate());
     }
+
+
 
 
 

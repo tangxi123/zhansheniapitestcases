@@ -1,5 +1,6 @@
 package com.bbd.zhanshen.i.api.bean;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.http.HttpMethod;
 
 import java.io.Serializable;
@@ -7,6 +8,7 @@ import java.net.URI;
 import java.time.LocalDateTime;
 import java.util.Map;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Testcase{
     private Long id;
 
@@ -24,9 +26,9 @@ public class Testcase{
 
     private Map<String, String> headers;
 
-    private Map<String, Object> parameters;
+    private Map<String, String> parameters;
 
-    private Map<String, Object> expected;
+    private Object expected;
 
     private LocalDateTime createdAt;
 
@@ -37,6 +39,8 @@ public class Testcase{
     private int isPassed;
 
     private LocalDateTime testAt;
+
+    private String statusCode;
 
     public Long getId() {
         return id;
@@ -102,11 +106,11 @@ public class Testcase{
         this.headers = headers;
     }
 
-    public Map<String, Object> getParameters() {
+    public Map<String, String> getParameters() {
         return parameters;
     }
 
-    public void setParameters(Map<String, Object> parameters) {
+    public void setParameters(Map<String, String> parameters) {
         this.parameters = parameters;
     }
 
@@ -126,11 +130,11 @@ public class Testcase{
         this.updatedAt = updatedAt;
     }
 
-    public Map<String, Object> getExpected() {
+    public Object getExpected() {
         return expected;
     }
 
-    public void setExpected(Map<String, Object> expected) {
+    public void setExpected(Object expected) {
         this.expected = expected;
     }
 
@@ -156,5 +160,13 @@ public class Testcase{
 
     public void setTestAt(LocalDateTime testAt) {
         this.testAt = testAt;
+    }
+
+    public String getStatusCode() {
+        return statusCode;
+    }
+
+    public void setStatusCode(String statusCode) {
+        this.statusCode = statusCode;
     }
 }

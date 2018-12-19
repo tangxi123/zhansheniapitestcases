@@ -4,7 +4,7 @@ spring:
   ###数据源配置###
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/tplatform
+    url: jdbc:mysql://localhost:3306/tplatform?characterEncoding=utf8&useSSL=false
     username: root
     password: tx123456
 

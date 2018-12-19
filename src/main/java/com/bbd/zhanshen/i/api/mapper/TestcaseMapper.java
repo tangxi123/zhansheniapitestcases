@@ -24,6 +24,7 @@ public interface TestcaseMapper {
     @SelectProvider(type = TestcaseSqlBuilder.class, method = "buildGetTestcaseByModuleAndSuite")
     List<Testcase> GetTestcaseByModuleAndSuite(@Param("suite") String suite, @Param("testModule") String testModule);
 
+
 }
 
 
