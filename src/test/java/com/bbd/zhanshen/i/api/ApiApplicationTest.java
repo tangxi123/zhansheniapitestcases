@@ -20,13 +20,23 @@ import java.util.List;
 public class ApiApplicationTest extends AbstractTestNGSpringContextTests {
 
     public static void main(String[] args) {
-        List<XmlSuite> suites = new ArrayList<XmlSuite>();
-        suites.add(Suite.createSuite("POC_User","login",LoginTest.class));
-        suites.add(Suite.createSuite("POC_Info","searchInfo",SearchInfoTest.class));
-        suites.add(Suite.createSuite("POC_Info2","newDetail",NewDetailTest.class));
-        TestNG tng = new TestNG();
-        tng.setXmlSuites(suites);
-        tng.run();
+//        List<XmlSuite> suites = new ArrayList<XmlSuite>();
+//        suites.add(Suite.createSuite("POC_User","login",LoginTest.class));
+//        suites.add(Suite.createSuite("POC_Info","searchInfo",SearchInfoTest.class));
+//        suites.add(Suite.createSuite("POC_Info2","newDetail",NewDetailTest.class));
+//
+//        TestNG tng = new TestNG();
+//        tng.setXmlSuites(suites);
+//        tng.run();
+
+        TestNG testNG = new TestNG();
+        List<String> suites = new ArrayList<String>();
+        suites.add(".\\src\\main\\resources\\testngxml\\testng.xml");
+
+        testNG.setTestSuites(suites);
+        testNG.run();
+
+
     }
 
 }

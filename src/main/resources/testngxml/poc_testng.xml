@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="poc-testcase-suites">
+    <suite-files>
+        <suite-file path="poc_user_testng.xml"></suite-file>
+        <suite-file path="poc_pageSyscode_testng.xml"></suite-file>
+        <suite-file path="poc_searchInfo-testng.xml"></suite-file>
+    </suite-files>
+</suite>

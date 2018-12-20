@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <parameter name="first-name" value="tangxi"/>
-    <test verbose="2" preserve-order="true" name="Test">
-        <!--<groups>-->
-        <!--<run>-->
-        <!--<include name="init"/>-->
-        <!--</run>-->
-        <!--</groups>-->
-
-        <classes>
-            <class name="com.bbd.zhanshen.i.api.poc.login.LoginTest">
-                <!--<methods>-->
-                <!--&lt;!&ndash;<include name="method1"/>&ndash;&gt;-->
-                <!--&lt;!&ndash;<include name="initEnviroment"/>&ndash;&gt;-->
-                <!--<include name="serverStartedOk"/>-->
-                <!--</methods>-->
-
-            </class>
-
-        </classes>
-
-    </test>
+<suite name="zhansheni-api-testcase-suites">
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+    <suite-files>
+        <suite-file path="poc_testng.xml"></suite-file>
+    </suite-files>
 </suite>

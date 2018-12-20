@@ -10,6 +10,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.AnnotationIntrospector;
 import com.jayway.restassured.specification.RequestSpecification;
 import org.testng.Assert;
+import org.testng.IReporter;
 import org.testng.ITestContext;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -36,6 +37,7 @@ public class FindArticleTest extends BaseIT {
         setParameters(testcase,iTestContext);
         setUrl(testcase,iTestContext);
         setStatusCode(testcase,iTestContext);
+
     }
 
     @Test(dataProvider = "findArticleTestData")
@@ -87,7 +89,11 @@ public class FindArticleTest extends BaseIT {
     private void assertEqualsNiPic(Article actualArtical, Article expectedArticle){
         List<NiPic> actualNiPicList = actualArtical.getNiPicList();
         List<NiPic> expectedNiPicList = expectedArticle.getNiPicList();
-        assertThat(actualNiPicList.size()).isGreaterThanOrEqualTo(expectedNiPicList.size());
+        assertThat(actualNiPicList.size()).isEqualTo(expectedNiPicList.size());
+
+        for(int i=0; i<actualNiPicList.size(); i++){
+            assertThat(actualNiPicList.get(i).getNipDesc()).isEqualTo(expectedNiPicList.get(i).getNipDesc());
+        }
 
 
 

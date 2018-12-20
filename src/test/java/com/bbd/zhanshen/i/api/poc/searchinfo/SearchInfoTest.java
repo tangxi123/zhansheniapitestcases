@@ -63,6 +63,7 @@ public class SearchInfoTest extends BaseIT{
     }
 
     private ESInfoPage getActualESInfoPage(ITestContext ctx){
+
         return given()
                 .spec(spec)
                 .body(ctx.getCurrentXmlTest().getAllParameters())

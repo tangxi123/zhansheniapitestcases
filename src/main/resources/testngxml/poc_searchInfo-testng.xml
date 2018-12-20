@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="poc-searchInfo-suites">
+    <test name="searchInfoTest">
+        <classes>
+            <class name="com.bbd.zhanshen.i.api.poc.searchinfo.FindArticleTest"></class>
+            <class name="com.bbd.zhanshen.i.api.poc.searchinfo.NewDetailTest"></class>
+            <class name="com.bbd.zhanshen.i.api.poc.searchinfo.SearchInfoTest"></class>
+            <class name="com.bbd.zhanshen.i.api.poc.searchinfo.GroupByCarryTypeTest"></class>
+            <class name="com.bbd.zhanshen.i.api.poc.searchinfo.GroupByRootEventTest"></class>
+            <class name="com.bbd.zhanshen.i.api.poc.searchinfo.GroupByUnitTypeTest"></class>
+            <class name="com.bbd.zhanshen.i.api.poc.searchinfo.GroupByInfoSourceTypeTest"></class>
+            <class name="com.bbd.zhanshen.i.api.poc.searchinfo.QueryArticleListTest"></class>
+            <class name="com.bbd.zhanshen.i.api.poc.searchinfo.QueryElementInfoTest"></class>
+        </classes>
+    </test>
+</suite>
